@@ -1,0 +1,32 @@
+@import "_variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    min-width: 320px;
+    height: 68px;
+    padding: 0px 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    
+
+    .link-header {
+        display: flex;
+        gap: 40px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: $font-family;
+        font-size: 24px;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration-line: underline ;
+        }
+    }  
+}
