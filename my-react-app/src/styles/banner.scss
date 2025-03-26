@@ -1,28 +1,31 @@
 @import "variables";
 
+/****** mobile first ******/
+
 .banner {
-    height: 223px;
-    width: 1240px;
-    margin-left: 100px;
-    margin-right: 100px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
+
+    width: calc(100% - 80px);
+    position: relative;
+    max-width: $max-width-mobile;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    border: solid blue;
 
         img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 111px;
+        display: block;
+        border-radius: 25px;
         filter: brightness(0.4);
         } 
 
         .banner-text {
             position: absolute;
-            font-size: 48px;
+            top: 50px;
+            left: 40px;
+            text-align: left;
+            font-size: 24px;
             font-family: $font-family;
             font-weight: 700;
             color: white;
