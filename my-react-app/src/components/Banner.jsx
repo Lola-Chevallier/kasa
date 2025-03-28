@@ -6,8 +6,10 @@ const Banner = () => {
     return (
         <div className="banner">
             <img src={bannerImage} alt="Paysage montagneux"/>
-            <div className="banner-text">
-                Chez vous, partout et ailleurs
+            <div>
+                <h1 className="banner-text">
+                <span className="mobil-break">Chez vous,</span> partout et ailleurs
+                </h1>
             </div>
         </div>
     );
