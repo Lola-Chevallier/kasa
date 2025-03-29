@@ -1,17 +1,11 @@
 @import 'variables';
 
 /******* base ******/
-* {
+
+html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    max-width: 100%;
-    outline: 3px solid yellow;
-}
-
-html, body {
     width: 100%;
-    overflow-x: hidden;
 }
   

@@ -1,20 +1,16 @@
 import React from "react";
-import { getLogements } from "../DataLogements";
+import styles from "../styles/Cards.module.scss";
 
-const Card = () => {
-    const logements = getLogements();
-    console.log(logements);
+const Card = ({ logement }) => {
 
     return (
-        <div>
-            {logements.map((logement) => (
-                <div key={logement.id}>
-                    <img src={logement.image} alt={logement.title}  style={{ border: "2px solid red", width: "200px", height: "auto" }}/>
-                    <h2>{logement.title}</h2>
-                </div>
-            ))}
-        </div>
+            <div className={styles.card}>
+                <img src={logement.image} alt={logement.title}/>
+                <h2>{logement.title}</h2>
+            </div>
     );
 };
  
 export default Card;
+
+//l.7 à 9 récupération des données via props : maintenant, chaque Card reçoit les données d'un logement via props, ce qui la rend réutilisable.

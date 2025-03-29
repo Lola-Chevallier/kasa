@@ -1,0 +1,45 @@
+@import '_variables';
+
+// Version mobile first
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.card {
+    width: $card-width;
+    height: auto;
+    border-radius: $card-border-radius;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+        width: 100%;
+        height: $card-height;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+
+    h2 {
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+
+// Version desktop 
+// mettre cette règle au :hover de .card :transform: scale($card-hover-scale);
+
