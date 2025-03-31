@@ -1,0 +1,41 @@
+.footer {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .mobile,
+  .desktop {
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    max-width: 100%; /* Empêche l'image de dépasser */
+    height: auto;
+  }
+  
+  .desktop {
+    display: none;
+  }
+  
+  /****** Version tablette ******/
+
+  @media (min-width: 768px) and (max-width: 1024px){
+
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      display: block;
+    }
+  }
+
+
+
+  /****** Version desktop ******/
+
+  @media (min-width: 1024px) {
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: block;
+    }
+  }

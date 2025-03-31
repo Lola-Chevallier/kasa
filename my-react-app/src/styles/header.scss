@@ -6,14 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    width: calc(100% - 60px);
-    max-width: $max-width-mobile;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 30px;
 
     .logo {
         width: 145px;
-        height: 47px;
+        height: auto;
     }
 
     .link-header {
@@ -32,4 +30,35 @@
             text-decoration-line: underline ;
         }
     }  
+}
+
+/****** Version tablette ******/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .header {
+        padding-left: 50px;
+        padding-right: 50px;
+
+            a {
+                font-size: 20px;
+            }
+    }
+}
+
+/****** Version desktop ******/ 
+
+@media (min-width: 1024px) {
+
+    .header {
+        padding: 40px 70px 0px;
+
+        .link-header {
+            gap: 57px;
+        }
+
+        a {
+        font-size: 24px;  
+        }
+    }
 }
