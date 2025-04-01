@@ -1,0 +1,80 @@
+@import 'variables';
+
+/****** Mobile first ******/
+
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+
+        .accordion-header {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ff6060;
+            border: transparent;
+        }
+
+        .accordion-content {
+            font-family: $font-family;
+            font-size: 13px;
+            padding: 20px;
+            background-color: #F6F6F6;
+        }
+}
+
+
+/****** Version tablette ******/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .accordions {
+        margin-bottom: 40px;
+    }
+
+    .accordion {
+        padding-left: 30px;
+        padding-right: 30px;
+
+            .accordion-header {
+                font-size: 20px;
+            }
+
+            .accordion-content {
+                font-size: 20px;
+            }
+    }
+
+}
+
+
+/****** Version desktop ******/
+
+@media (min-width: 1024px) {
+
+    .accordions {
+        margin-bottom: 40px;
+    }
+
+    .accordion {
+        padding-left: 50px;
+        padding-right: 50px;
+
+            .accordion-header {
+                font-size: 24px;
+            }
+
+            .accordion-content {
+                font-size: 24px;
+            }
+    }
+
+}

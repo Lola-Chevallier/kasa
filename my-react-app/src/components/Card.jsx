@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../styles/Cards.module.scss";
 
-const Card = ({ logement }) => {
+const Card = ({ logement, onclick }) => {
 
     return (
-            <div className={styles.card}>
+            <div className={styles.card} onclick={onclick} role="button" tabIndex="0">
                 <img src={logement.image} alt={logement.title}/>
                 <h2>{logement.title}</h2>
             </div>

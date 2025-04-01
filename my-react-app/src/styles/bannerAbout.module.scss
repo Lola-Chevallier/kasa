@@ -1,0 +1,44 @@
+@import 'variables';
+
+/****** Mobile first ******/
+
+.bannerAbout {
+    padding-right: 20px;
+    padding-left: 20px;
+
+        img{
+            width: 100%;
+            height: 111px;
+            border-radius: 15px;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+}
+
+
+/****** Version tablette ******/ 
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .bannerAbout {
+        padding: 0px 50px 20px 50px;
+        
+            img {
+                height: 223px; /* Ajuste la hauteur */
+            }
+    }
+}
+
+/****** verison desktop ******/
+
+@media (min-width: 1024px) {
+
+    .bannerAbout {
+        padding: 40px 70px 20px 70px;
+        
+        img {
+            height: 223px; /* Ajuste la hauteur */
+        }
+    }
+
+}
