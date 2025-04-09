@@ -12,25 +12,37 @@
     margin-bottom: 50px;
 }
 
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+
+}
+
 .card {
+    position: relative;
     width: $card-width;
     height: 323.8px;
     border-radius: $card-border-radius;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-
-    &:hover {
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    }
+    display: block;
 
     img {
         width: 100%;
-        height: $card-height-img;
+        height: 100%;
         object-fit: cover;
-        border-radius: 10px 10px 0px 0px;
+        border-radius: 10px;
 
     }
 
     h2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        box-sizing: border-box;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        color: white;
         font-family: $font-family;
         font-size: 18px;
         font-weight: 700;
@@ -46,13 +58,7 @@
         margin: 50px;
         padding-top: 50px;
         padding-bottom: 50px;
-        background-color: #f6f6f6;
-        border-radius: 20px;
         gap: 60px;
-    }
-
-    .card {
-        background-color: white;
     }
 }
 
@@ -67,18 +73,13 @@
         margin: 70px;
         padding-top: 70px;
         padding-bottom: 70px;
-        background-color: #f6f6f6;
-        border-radius: 20px;
         gap: 60px;
     }
 
-    .card {
-        background-color: white;
-
-        &:hover {
+    .card:hover {
             transform: scale($card-hover-scale);
-            cursor: pointer; 
-        }
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            cursor: pointer;      
     }
 }
 

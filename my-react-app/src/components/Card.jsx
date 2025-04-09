@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "../styles/Cards.module.scss";
+import { Link } from "react-router-dom";
 
-const Card = ({ logement, onclick }) => {
+const Card = ({ logement, onClick }) => {
 
     return (
-            <div className={styles.card} onclick={onclick} role="button" tabIndex="0">
+        <Link to={`/logement/${logement.id}`} className={styles.cardLink}>
+            <div className={styles.card} onClick={onClick} role="button" tabIndex="0">
                 <img src={logement.image} alt={logement.title}/>
                 <h2>{logement.title}</h2>
-            </div>
+            </div>           
+        </Link>
     );
 };
  
