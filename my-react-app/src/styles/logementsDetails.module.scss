@@ -166,6 +166,7 @@
       }
 
       .counter{
+        display: block;
         position: absolute;
         font-family: $font-family;
         bottom: 0px;
@@ -230,6 +231,7 @@
         }
 
         .counter{
+        display: block;
         position: absolute;
         font-family: $font-family;
         bottom: 0px;
