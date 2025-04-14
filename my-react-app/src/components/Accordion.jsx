@@ -3,19 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../styles/accordion.scss";
 
-
-const Accordion = ({ title, content }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    
+const Accordion = ({ title, content, contentClass = "", headerClass="", className="" }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="accordion">
-      <button className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
+    <div className={`accordion ${className}`}>
+      <button className={`accordion-header ${headerClass}`} onClick={() => setIsOpen(!isOpen)}>
         {title}
-         {/* Icône de flèche dynamique */}
-         <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
+        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </button>
-      {isOpen && <div className="accordion-content">{content}</div>}
+      {isOpen && (
+        <div className={`accordion-content ${contentClass}`}>
+          {content}
+        </div>
+      )}
     </div>
   );
 };
