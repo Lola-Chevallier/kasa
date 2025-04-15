@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 
 /****** Mobile first ******/
 
@@ -10,7 +10,7 @@
 
         .accordion-header {
             font-family: $font-family;
-            font-weight: 700;
+            font-weight: $font-weight-lg;
             font-size: 13px;
             color: white;
             display: flex;
@@ -18,7 +18,7 @@
             width: 100%;
             padding: 10px;
             border-radius: 5px;
-            background-color: #ff6060;
+            background-color: $flashy-color;
             border: transparent;
         }
 
@@ -26,14 +26,14 @@
             font-family: $font-family;
             font-size: 13px;
             padding: 20px;
-            background-color: #F6F6F6;
+            background-color: $light-color;
         }
 }
 
 
 /****** Version tablette ******/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: #{$breakpoint-tablet-sm}) and (max-width: #{$breakpoint-tablet-lg}) {
 
     .accordions {
         margin-bottom: 40px;
@@ -44,11 +44,11 @@
         padding-right: 80px;
 
             .accordion-header {
-                font-size: 20px;
+                font-size: $font-size-lg;
             }
 
             .accordion-content {
-                font-size: 20px;
+                font-size: $font-size-lg
             }
     }
 
@@ -57,7 +57,7 @@
 
 /****** Version desktop ******/
 
-@media (min-width: 1024px) {
+@media (min-width: #{$breakpoint-desktop-sm}) {
 
     .accordions {
         margin-bottom: 40px;
@@ -68,12 +68,12 @@
         padding-right: 120px;
 
             .accordion-header {
-                font-size: 24px;
+                font-size: $font-size-xl;
                 cursor: pointer;
             }
 
             .accordion-content {
-                font-size: 24px;
+                font-size: $font-size-xl;
             }
     }
 

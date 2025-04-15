@@ -1,30 +1,43 @@
+// Typographie
 $font-family: 'Montserrat', sans-serif;
-$max-width-mobile: 768px;
-$max-width-desktop: 1440px;
+$font-size-xsm: 12px;
+$font-size-sm: 14px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-weight-md: 500;
+$font-weight-lg: 700;
 
-//variables Cards tout format 
-$card-border-radius: 10px;
+// variables responsive breakpoints
+$breakpoint-tablet-sm: 768px;
+$breakpoint-tablet-lg: 1023px;
+$breakpoint-desktop-sm: 1024px;
+
+
+// colors 
+$dark-color: #000;
+$light-color: #f6f6f6;
+$flashy-color: #ff6060;
+
+
+// Border radius 
+$border-radius-xsm: 5px;
+$border-radius-sm: 10px;
+$border-radius-md: 15px;
+$border-radius-lg: 50%;
+
+
+// Variabes cards
+$card-width: 335px;
+$card-height-img: 323.8px;
 $card-hover-scale: 1.05;
 
-// Variabes pour Cards mobile first
 
-$card-width: 335px;
-$card-height-img: 255px;
-
-
-
-// Variables pour Cards desktop 
-
-$card-width-d: 340px;
-$card-height-d: 340px;
-
-
-// Variables banners mobile first 
-
+// Mixin banners mobile first 
 @mixin banner-img {
     width: 100%;
     height: 111px;
-    border-radius: 15px;
+    border-radius: $border-radius-md;
     object-fit: cover;
     filter: brightness(0.4);
 }

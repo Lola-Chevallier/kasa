@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 
 /****** mobile first ******/
 
@@ -12,7 +12,7 @@
         display: block;
         width: 100%;
         height: 111px;
-        border-radius: 15px;
+        border-radius: $border-radius-md;
         object-fit: cover;
         filter: brightness(0.4);
         } 
@@ -23,9 +23,9 @@
             left: 10%;
             max-width: 80%;
             text-align: left;
-            font-size: 24px;
+            font-size: $font-size-xl;
             font-family: $font-family;
-            font-weight: 700;
+            font-weight: $font-weight-lg;
             color: white;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
@@ -36,7 +36,7 @@
 }
 
 /****** version tablette ******/
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: #{$breakpoint-tablet-sm}) and (max-width: #{$breakpoint-tablet-lg}){
 
     .banner {
         padding-left: 50px;
@@ -63,7 +63,7 @@
 
 /****** Version Desktop ******/
 
-@media (min-width: 1024px) {
+@media (min-width: #{$breakpoint-desktop-sm}) {
     .banner {
         padding: 60px 70px; /* Ajoute plus d’espace */
         

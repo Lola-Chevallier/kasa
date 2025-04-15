@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 
 /******* Mobile first ******/
 
@@ -12,18 +12,18 @@
         justify-content: center;
         align-items: center;
         font-family: $font-family;
-        font-weight: 700;
+        font-weight: $font-weight-lg;
         font-size: 96px;
-        color: #FF6060;
+        color: $flashy-color;
     }
 
     .error-message {
         display: block;
         text-align: center;
         font-family: $font-family;
-        font-weight: 500;
-        font-size: 18px;
-        color: #FF6060;
+        font-weight: $font-weight-md;
+        font-size: $font-size-md;
+        color: $flashy-color;
         padding: 0px 20px 0px 20px;
         margin-bottom: 80px;
     }
@@ -34,20 +34,20 @@
 
     nav.link-header{
         font-family: $font-family;
-        font-size: 14px;
-        font-weight: 500;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-md;
         text-align: center;
         
         a {
-            color: black; 
+            color: $dark-color; 
             text-decoration: underline; 
             
             &:visited {
-                color: black; 
+                color: $dark-color; 
             }
     
             &:hover {
-                color: black; 
+                color: $dark-color; 
             }
         }
 
@@ -56,7 +56,7 @@
 
 /****** version tablette ******/
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: #{$breakpoint-tablet-sm}) and (max-width: #{$breakpoint-tablet-lg}) {
 
     .error-container {
         max-width: 100%;
@@ -83,7 +83,7 @@
 
 /****** version desktop ******/
 
-@media (min-width: 1024px) {
+@media (min-width: #{$breakpoint-desktop-sm}) {
 
     .error-container {
         max-width: 100%;;
@@ -101,7 +101,7 @@
             }
 
             nav.link-header {
-                font-size: 18px;
+                font-size: $font-size-md;
         
                 &:hover{
                     cursor: pointer;
