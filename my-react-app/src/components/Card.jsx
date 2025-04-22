@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "../styles/Cards.module.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Card = ({ logement, onClick }) => {
 
     return (
-        <Link to={`/logement/${logement.id}`} className={styles.cardLink}>
+        <NavLink to={`/logement/${logement.id}`} className={styles.cardLink}>
             <div className={styles.card} onClick={onClick} role="button" tabIndex="0">
                 <img src={logement.image} alt={logement.title}/>
                 <h2>{logement.title}</h2>
             </div>           
-        </Link>
+        </NavLink>
     );
 };
  

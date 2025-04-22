@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styles from "../styles/logementsDetails.module.scss";
 import { getLogementById } from "../DataLogements";

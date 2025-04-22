@@ -12,7 +12,7 @@ export const getLogements = () => {
     return logementsTraites; // retourne le tableau de logements traités
 };
 
-// infos modale au click sur cards
+// infos détails des logements au click sur cards
 export const getLogementById = (id) => { 
     return logements.find((logement) => logement.id === id);
 };
