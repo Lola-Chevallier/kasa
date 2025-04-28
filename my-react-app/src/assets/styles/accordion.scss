@@ -15,7 +15,9 @@
             color: white;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
+            height: 30px;
             padding: 10px;
             border-radius: 5px;
             background-color: $flashy-color;
@@ -27,6 +29,16 @@
             font-size: 13px;
             padding: 20px;
             background-color: $light-color;
+        }
+
+        .accordion-icon{
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .rotated{
+            transform: rotate(180deg);
         }
 }
 
@@ -45,6 +57,7 @@
 
             .accordion-header {
                 font-size: $font-size-lg;
+                height: 52px;
             }
 
             .accordion-content {
@@ -69,6 +82,7 @@
 
             .accordion-header {
                 font-size: $font-size-xl;
+                height: 52px;
                 cursor: pointer;
             }
 

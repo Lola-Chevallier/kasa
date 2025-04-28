@@ -4,8 +4,8 @@ import styles from "../assets/styles/logementsDetails.module.scss";
 import { getLogementById } from "../services/DataLogements";
 import Accordion from "../components/Accordion";
 import SlideShow from "../components/SlideShow";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import starFilled from "../assets/images/icons/star-filled.svg";
+import starEmpty from "../assets/images/icons/star-empty.svg";
 
 const LogementsDetails = () => {
     const { id } = useParams(); // Récupère l’ID depuis l’URL
@@ -58,7 +58,12 @@ const LogementsDetails = () => {
                     <div className={styles.rating}>
                         {/* gérer les étoiles dynamiquement ici */}
                         {Array.from({ length: 5 }, (_, i) => (
-                            <FontAwesomeIcon key={i} icon={faStar} className={i < fullLogement.rating ? styles.starFilled : styles.starEmpty}/>
+                            <img
+                            key={i}
+                            src={i < fullLogement.rating ? starFilled : starEmpty}
+                            alt="étoile"
+                            className={styles.star}
+                          />
                         ))}
                     </div>
                 </div>

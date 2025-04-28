@@ -108,14 +108,9 @@
         display: flex;
         gap: 6px;
 
-        .starFilled {
-          color: $flashy-color;
-          font-size: $font-size-md;
-        }
-
-        .starEmpty {
-          color: #e3e3e3;
-          font-size: $font-size-md;
+        .star{
+          width: 13px;
+          height: 13px;
         }
       }
     }
@@ -210,9 +205,15 @@
 
         .rating {
           margin-bottom: 15px;
+
+          .star{
+            height: 30px;
+            width: 30px;
+          }
         }
       }
     }
+    
   }
 } 
 
@@ -276,6 +277,11 @@
 
             .rating {
               margin-bottom: 15px;
+
+              .star{
+                width: 36px !important;
+                height: 36px !important;
+              }
             }
           }
         }
