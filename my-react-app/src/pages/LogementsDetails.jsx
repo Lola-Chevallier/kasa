@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
-import styles from "../styles/logementsDetails.module.scss";
-import { getLogementById } from "../DataLogements";
+import styles from "../assets/styles/logementsDetails.module.scss";
+import { getLogementById } from "../services/DataLogements";
 import Accordion from "../components/Accordion";
 import SlideShow from "../components/SlideShow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

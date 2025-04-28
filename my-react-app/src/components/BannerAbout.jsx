@@ -1,6 +1,6 @@
 import React from "react";
 import bannerAboutImage from "../../src/assets/images/banner-about-img.webp";
-import styles from "../styles/bannerAbout.module.scss";
+import styles from "../assets/styles/bannerAbout.module.scss";
 
 const BannerAbout = () => {
     return (

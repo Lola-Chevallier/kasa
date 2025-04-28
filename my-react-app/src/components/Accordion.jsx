@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "../styles/accordion.scss";
+import "../assets/styles/accordion.scss";
 
 const Accordion = ({ title, content, contentClass = "", headerClass="", className="" }) => {
   const [isOpen, setIsOpen] = useState(false);

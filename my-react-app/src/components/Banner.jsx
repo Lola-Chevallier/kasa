@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/banner.scss';
+import '../assets/styles/banner.scss';
 import bannerImage from "../../src/assets/images/banner-img.webP";
 
 const Banner = () => {

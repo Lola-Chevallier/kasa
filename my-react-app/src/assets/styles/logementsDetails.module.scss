@@ -1,0 +1,283 @@
+@import '_variables';
+
+/****** mobile first ******/
+
+.LogementsDetails {
+  padding: 20px;
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 255px;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius-sm;
+    }
+    
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+      }
+    
+      .prev {
+        left: 10px;
+      }
+    
+      .next {
+        right: 10px;
+      }
+
+      .counter{
+        display: none;
+      }
+
+    }
+  
+
+  .header {
+    margin-top: 15px;
+
+    .left {
+      h1 {
+        font-family: $font-family;
+        font-size: $font-size-md;
+        color: $flashy-color;
+        margin-bottom: 8px;
+      }
+
+      .location {
+        font-family: $font-family;
+        font-size: $font-size-sm;
+        color: $dark-color;
+        margin-bottom: 10px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 15px;
+
+        .tag {
+          background-color: $flashy-color;
+          color: #fff;
+          padding: 4px 10px;
+          border-radius: $border-radius-xsm;
+          font-size: $font-size-xsm;
+          font-family: $font-family;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      .host {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        p {
+          font-size: $font-size-sm;
+          color: $flashy-color;
+          font-family: $font-family;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: $border-radius-lg;
+        }
+      }
+
+      .rating {
+        display: flex;
+        gap: 6px;
+
+        .starFilled {
+          color: $flashy-color;
+          font-size: $font-size-md;
+        }
+
+        .starEmpty {
+          color: #e3e3e3;
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+
+  .accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    // chaque bloc d'accordéon
+    >div {
+      width: 100%;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  .customEquipments {
+    background-color: $light-color;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+/****** version tablette ******/
+
+@media (min-width: #{$breakpoint-tablet-sm}) and (max-width: #{$breakpoint-tablet-lg}) {
+
+  .LogementsDetails {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0;
+
+    .slider{
+
+      button{
+        font-size: 80px;
+      }
+
+      .counter{
+        display: block;
+        position: absolute;
+        font-family: $font-family;
+        bottom: 0px;
+        right: 50%;
+        color: white;
+        font-size: $font-size-xsm;
+        padding: 4px 8px;
+        border-radius: $border-radius-xsm;
+      }
+    }
+
+    .accordions {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+
+      >div {
+        width: 50%;
+      } 
+    }
+
+    .customHeader {
+      font-size: $font-size-md;
+    }
+    
+    .customDescription,  .customEquipments {
+      font-size: 16px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 30px;
+
+        .rating {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+} 
+
+/****** version desktop ******/
+
+  @media screen and (min-width: #{$breakpoint-desktop-sm}) {
+
+    .LogementsDetails {
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-top: 50px;
+
+      .slider{
+      
+        button{
+          font-size: 100px;
+        }
+
+        .counter{
+        display: block;
+        position: absolute;
+        font-family: $font-family;
+        bottom: 0px;
+        right: 50%;
+        color: white;
+        font-size: $font-size-xsm;
+        padding: 4px 8px;
+        border-radius: $border-radius-xsm;
+        }
+      }
+
+        .accordions {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 40px;
+
+          >div {
+            width: 50%;
+          }
+        }
+
+        .customHeader {
+          font-size: $font-size-md;
+        }
+
+        .customDescription,  .customEquipments {
+          padding: 20px;
+          font-size: 16px;
+        }
+        
+        .header {
+          display: flex;
+          justify-content: space-between;
+
+          .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 10px;
+
+            .rating {
+              margin-bottom: 15px;
+            }
+          }
+        }
+    }
+  }

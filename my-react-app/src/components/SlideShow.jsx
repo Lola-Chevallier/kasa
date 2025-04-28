@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/logementsDetails.module.scss";
+import styles from "../assets/styles/logementsDetails.module.scss";
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

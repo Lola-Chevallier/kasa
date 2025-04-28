@@ -1,8 +1,8 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import { getLogements } from "../DataLogements";
-import styles from "../styles/Cards.module.scss";
+import { getLogements } from "../services/DataLogements";
+import styles from "../assets/styles/Cards.module.scss";
 
 const Home = () => {
   const logements = getLogements();

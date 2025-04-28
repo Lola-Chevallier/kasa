@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Cards.module.scss";
+import styles from "../assets/styles/Cards.module.scss";
 import { NavLink } from "react-router-dom";
 
 const Card = ({ logement, onClick }) => {

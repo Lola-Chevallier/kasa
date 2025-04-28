@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './router/Router'; // importation du routeur
-import './styles/index.scss';
+import './assets/styles/index.scss';
 
 function App() {
   return (

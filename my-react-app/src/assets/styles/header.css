@@ -1,0 +1,33 @@
+/****** mobile first ******/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  width: calc(100% - 60px);
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: solid red;
+}
+.header .logo {
+  width: 145px;
+  height: 47px;
+}
+.header .link-header {
+  display: flex;
+  gap: 15px;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.header a:hover {
+  text-decoration-line: underline;
+}
+
+/*# sourceMappingURL=header.css.map */
