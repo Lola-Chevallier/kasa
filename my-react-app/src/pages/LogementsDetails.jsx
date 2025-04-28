@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import styles from "../assets/styles/logementsDetails.module.scss";
 import { getLogementById } from "../services/DataLogements";
@@ -9,13 +9,32 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const LogementsDetails = () => {
     const { id } = useParams(); // Récupère l’ID depuis l’URL
-    const fullLogement = getLogementById(id); // Cherche le bon logement
+    const [fullLogement, setFullLogement] = useState(null); 
+    const [logementExiste, setLogementExiste] = useState(true); // Nouveau state
 
-    // Renvoi vers la page d'erreur si id incorrect
-    if (!fullLogement) {
-        return <Navigate to="/notFound404"/>;
+    useEffect(() => {
+        const logement = getLogementById(id);
+
+        if (logement) {
+            setFullLogement(logement); // On stocke le logement trouvé
+            setLogementExiste(true);   // OK il existe
+        } else {
+            setFullLogement(null);     // pas de logement trouvé
+            setLogementExiste(false);    
+        }
+    }, [id]);
+
+    // Si le logement n'existe pas, redirection 404
+    if (!logementExiste) {
+        return <Navigate to="/notFound404" />;
     }
 
+    // Si on est encore en train de charger
+    if (fullLogement === null) {
+        return <div>Chargement...</div>;
+    }
+
+    // Si tout est prêt, on affiche
     return (
         <div className={styles.LogementsDetails}>
             < SlideShow images={fullLogement.pictures} /> 
